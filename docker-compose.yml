@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  phaser-npc:
+    build: .
+    container_name: phaser-npc
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
